@@ -1,0 +1,19 @@
+
+<!-- saved from url=(0159)file:///C:/Users/victor.paranaiba/Desktop/VICTOR/UFU/2020-1/SISTEMAS%20DIGITAIS/TRABALHO/Semana%2007%20-%20Flask%20-%20Victor%20Spini/web/templates/update.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>{% extends 'base.html' %}
+
+{% block head %}
+    <title>Task Master</title>
+{% endblock %}
+
+{% block body %}
+   <div class="content">
+        <h1>Update Task</h1>
+        <div class="form">
+            <form action="file:///C:/update/%7B%7Btask.id%7D%7D" method="POST">
+                <input type="text" name="content" id="content" valie="{{task.content}}">
+                <input type="submit" value="Update">
+            </form>
+        </div>
+   </div>
+{% endblock %}</body></html>

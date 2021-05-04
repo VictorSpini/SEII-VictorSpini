@@ -1,0 +1,41 @@
+
+<!-- saved from url=(0158)file:///C:/Users/victor.paranaiba/Desktop/VICTOR/UFU/2020-1/SISTEMAS%20DIGITAIS/TRABALHO/Semana%2007%20-%20Flask%20-%20Victor%20Spini/web/templates/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>{% extends 'base.html' %}
+
+{% block head %}
+    <title>Task Master</title>
+{% endblock %}
+
+{% block body %}
+   <div class="content">
+        <h1>Task Master</h1>
+        {% if tasks|length &lt; 1 %}
+        <h4 style="text-align: center">There are no tasks. Create one below!</h4>
+        {% else %}
+        
+            {% for task in tasks %}
+                
+            {% endfor %}
+        <table>
+            <tbody><tr>
+                <th>Task</th>
+                <th>Added</th>
+                <th>Actions</th>
+            </tr><tr>
+                    <td>{{task.content}}</td>
+                    <td>{{task.date_creater.date()}}</td>
+                    <td>
+                        <a href="file:///C:/delete/%7B%7Btask.id%7D%7D">Delete</a>
+                        <br>
+                        <a href="file:///C:/update/%7B%7Btask.id%7D%7D">Update</a>
+                    </td>
+                </tr></tbody></table>
+        {% endif %}
+        <div class="form">
+            <form action="file:///C:/" method="POST">
+                <input type="text" name="content" id="content">
+                <input type="submit" value="Add Task">
+            </form>
+        </div>
+   </div>
+{% endblock %}</body></html>
